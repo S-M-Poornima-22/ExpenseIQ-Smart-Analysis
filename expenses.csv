@@ -1,10 +1,10 @@
 Date,Category,Description,Amount,Payment
-2026-09-30,Shopping,stationary,200.0,Cash
+2026-09-30,Shopping,stationary,300.0,Cash
 2026-09-22,Others,doctor,500.0,UPI
+2026-09-17,Others,temple,200.0,Cash
 2026-08-24,Travel,temple,500.0,Cash
 2026-08-22,Food,lunch,1000.0,Card
 2026-08-17,Entertainment,movie,600.0,UPI
 2026-08-13,Bills,EB,3400.0,Bank Transfer
 2026-08-11,Shopping,dress,600.0,Card
-2026-08-10,Bills,water,220.0,Card
 2026-08-01,Travel,petrol,200.0,Card

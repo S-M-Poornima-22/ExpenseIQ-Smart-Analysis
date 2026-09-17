@@ -1,291 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Expense</title>
-
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
-
 <body>
-
-
-    <header>
-
-        <div class="logo">
-            💰 ExpenseTracker
-        </div>
-
-        <nav>
-
-            <a href="/">
-                Dashboard
-            </a>
-
-        </nav>
-
-    </header>
-
-
-
-    <div class="container">
-
-
-        <div class="page-title">
-
-            <h1>
-                Edit Expense
-            </h1>
-
-            <p>
-                Update your expense details.
-            </p>
-
-        </div>
-
-
-
-        <div class="form-card"
-             style="max-width:600px; margin:auto;">
-
-
-            <form
-                action="/edit/{{ expense['id'] }}"
-                method="POST"
-            >
-
-
-                <!-- DATE -->
-
-                <div class="form-group">
-
-                    <label for="date">
-                        Date
-                    </label>
-
-                    <input
-                        type="date"
-                        id="date"
-                        name="date"
-                        value="{{ expense['date'] }}"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- CATEGORY -->
-
-                <div class="form-group">
-
-                    <label for="category">
-                        Category
-                    </label>
-
-                    <select
-                        id="category"
-                        name="category"
-                        required
-                    >
-
-                        <option
-                            value="Food"
-                            {% if expense['category'] == 'Food' %}
-                                selected
-                            {% endif %}
-                        >
-                            🍔 Food
-                        </option>
-
-
-                        <option
-                            value="Travel"
-                            {% if expense['category'] == 'Travel' %}
-                                selected
-                            {% endif %}
-                        >
-                            🚕 Travel
-                        </option>
-
-
-                        <option
-                            value="Shopping"
-                            {% if expense['category'] == 'Shopping' %}
-                                selected
-                            {% endif %}
-                        >
-                            🛍️ Shopping
-                        </option>
-
-
-                        <option
-                            value="Bills"
-                            {% if expense['category'] == 'Bills' %}
-                                selected
-                            {% endif %}
-                        >
-                            💡 Bills
-                        </option>
-
-
-                        <option
-                            value="Entertainment"
-                            {% if expense['category'] == 'Entertainment' %}
-                                selected
-                            {% endif %}
-                        >
-                            🎬 Entertainment
-                        </option>
-
-
-                        <option
-                            value="Others"
-                            {% if expense['category'] == 'Others' %}
-                                selected
-                            {% endif %}
-                        >
-                            📦 Others
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-
-                <!-- DESCRIPTION -->
-
-                <div class="form-group">
-
-                    <label for="description">
-                        Description
-                    </label>
-
-                    <input
-                        type="text"
-                        id="description"
-                        name="description"
-                        value="{{ expense['description'] }}"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- AMOUNT -->
-
-                <div class="form-group">
-
-                    <label for="amount">
-                        Amount
-                    </label>
-
-                    <input
-                        type="number"
-                        id="amount"
-                        name="amount"
-                        value="{{ expense['amount'] }}"
-                        min="0"
-                        step="0.01"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- PAYMENT -->
-
-                <div class="form-group">
-
-                    <label for="payment">
-                        Payment Method
-                    </label>
-
-                    <select
-                        id="payment"
-                        name="payment"
-                        required
-                    >
-
-                        <option
-                            value="UPI"
-                            {% if expense['payment'] == 'UPI' %}
-                                selected
-                            {% endif %}
-                        >
-                            📱 UPI
-                        </option>
-
-
-                        <option
-                            value="Cash"
-                            {% if expense['payment'] == 'Cash' %}
-                                selected
-                            {% endif %}
-                        >
-                            💵 Cash
-                        </option>
-
-
-                        <option
-                            value="Card"
-                            {% if expense['payment'] == 'Card' %}
-                                selected
-                            {% endif %}
-                        >
-                            💳 Card
-                        </option>
-
-
-                        <option
-                            value="Bank Transfer"
-                            {% if expense['payment'] == 'Bank Transfer' %}
-                                selected
-                            {% endif %}
-                        >
-                            🏦 Bank Transfer
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-
-                <button type="submit">
-                    💾 Save Changes
-                </button>
-
-
-                <br><br>
-
-
-                <a href="/"
-                   style="display:block; text-align:center; text-decoration:none;">
-                    ← Back to Dashboard
-                </a>
-
-
-            </form>
-
-        </div>
-
-
+<header>
+    <div class="logo">💰 ExpenseTracker</div>
+    <nav><a href="/">Dashboard</a></nav>
+</header>
+
+<div class="container">
+    <div class="page-title">
+        <h1>Edit Expense</h1>
+        <p>Update your expense details.</p>
     </div>
 
+    <div class="form-card" style="max-width:600px; margin:auto;">
+        <form action="/edit/{{ expense['id'] }}" method="POST">
 
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" value="{{ expense['date'] }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="Food" {% if expense['category'] == 'Food' %}selected{% endif %}>🍔 Food</option>
+                    <option value="Travel" {% if expense['category'] == 'Travel' %}selected{% endif %}>🚕 Travel</option>
+                    <option value="Shopping" {% if expense['category'] == 'Shopping' %}selected{% endif %}>🛍️ Shopping</option>
+                    <option value="Bills" {% if expense['category'] == 'Bills' %}selected{% endif %}>💡 Bills</option>
+                    <option value="Entertainment" {% if expense['category'] == 'Entertainment' %}selected{% endif %}>🎬 Entertainment</option>
+                    <option value="Others" {% if expense['category'] == 'Others' %}selected{% endif %}>📦 Others</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" value="{{ expense['description'] }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" value="{{ expense['amount'] }}" min="0" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="payment">Payment Method</label>
+                <select id="payment" name="payment" required>
+                    <option value="UPI" {% if expense['payment'] == 'UPI' %}selected{% endif %}>📱 UPI</option>
+                    <option value="Cash" {% if expense['payment'] == 'Cash' %}selected{% endif %}>💵 Cash</option>
+                    <option value="Card" {% if expense['payment'] == 'Card' %}selected{% endif %}>💳 Card</option>
+                    <option value="Bank Transfer" {% if expense['payment'] == 'Bank Transfer' %}selected{% endif %}>🏦 Bank Transfer</option>
+                </select>
+            </div>
+
+            <button type="submit">💾 Save Changes</button>
+            <br><br>
+            <a href="/" style="display:block; text-align:center; text-decoration:none;">← Back to Dashboard</a>
+
+        </form>
+    </div>
+</div>
 </body>
-
 </html>
+
