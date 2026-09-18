@@ -8,13 +8,13 @@
 
 ## 💡 From Expenses to Insights
 
-Small expenses can easily add up without noticing.
+• Small expenses can easily add up without noticing.
 
 simple question:
 
 > **“Can everyday expense data tell us something useful about our spending habits?”**
 
-The application helps organize daily transactions, while Power BI transforms the collected data into visual insights that make spending patterns easier to understand.
+• The application helps organize daily transactions, while Power BI transforms the collected data into visual insights that make spending patterns easier to understand.
 
 **Record → Organize → Analyze → Understand** 📊
 
@@ -40,19 +40,15 @@ The application helps organize daily transactions, while Power BI transforms the
 
 ![Expense Tracker Dashboard](screenshots/Expense_tracker.png)
 
-*A simple view to keep everyday spending organized.*
 
 ### Add a New Expense
 
 ![Add Expense](screenshots/add_expense.png)
 
-*Enter the details once and keep the record organized.*
 
 ### Dashboard
 
 ![Power BI Dashboard](screenshots/powerbi.png)
-
-*Turn individual transactions into visual spending insights.*
 
 ## 📂 Project Structure
 
@@ -104,6 +100,12 @@ Personal-Expense-Tracker/
        ↓
 💡 Spending Insights
 ```
+## 📚 What I Learned
+
+Strengthened my understanding of **Flask routing, CRUD operations, SQLite database integration, and form handling**.
+Worked with **Power BI with DAX for data visualization and analytics**.
+Learned to connect a **Flask application, database, and analytics workflow** into one project.
+
 ### 👩‍💻 Built By 
 
 **Poornima**
