@@ -1,10 +1,10 @@
-# 💰 Personal Expense Tracker & Analytics Dashboard
+💰ExpenseIQ — Smart Expense Tracking & Analytics
 
-> **Track your expenses. Understand your spending. Make every number count.**
+> **Track it. Analyze it. Understand it.**
 
 Personal Expense Tracker is a simple web application built to help users record and manage their everyday expenses in an organized way.
 
-The project also connects expense data with **Power BI**, turning daily transactions into clear visual insights that make spending patterns easier to understand.
+The project also connects expense data with **Power BI**, turning daily transactions into clear visual insights that makes easier to understand.
 
 ---
 
