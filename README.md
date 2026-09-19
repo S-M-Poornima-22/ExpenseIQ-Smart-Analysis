@@ -53,6 +53,7 @@ simple question:
 
 👉 [View Expense-Tracker Live]( https://expenseiq-smart-analysis.onrender.com)
 
+Explore ExpenseIQ live. 📊
 
 ## 📂 Project Structure
 
