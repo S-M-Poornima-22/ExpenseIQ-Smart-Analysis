@@ -48,6 +48,12 @@ simple question:
 
 ![Power BI Dashboard](screenshots/powerbi.png)
 
+
+## 🌐 Live Demo
+
+👉 [View Expense-Tracker Live]( https://expenseiq-smart-analysis.onrender.com)
+
+
 ## 📂 Project Structure
 
 ```text
