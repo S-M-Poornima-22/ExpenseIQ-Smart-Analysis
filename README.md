@@ -8,8 +8,6 @@
 
 ## 💡 From Expenses to Insights
 
-• Small expenses can easily add up without noticing.
-
 simple question:
 
 > **“Can everyday expense data tell us something useful about our spending habits?”**
